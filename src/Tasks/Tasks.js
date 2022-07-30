@@ -44,23 +44,19 @@ console.log(sum([1, 4, 5, 8]));
 //5
 function validateCode(code) {
     let arrayNumber = Array.from(code.toString(), Number)
-    return !(arrayNumber[0] === 1||2||3)
+    return arrayNumber[0] === 1||2||3
 }
 
 console.log(validateCode(1234))
 //6
 function makeNegative(num) {
-    if (num <= 0) {
-        return num
-    } else {
-        return (-1) * num
-    }
+    return num <=0 ? num : (-1) * num
 }
 
 console.log(makeNegative(2))
 //7
 function isDivisible(n, x, y) {
-    return !(n % x === 0 && n % y === 0)
+    return n % x === 0 && n % y === 0
 }
 console.log(isDivisible(34, 7, 13))
 //8
