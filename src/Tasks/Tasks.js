@@ -118,3 +118,20 @@ function sumMix(x){
     return sum
 }
 console.log(sumMix([1, 5, "4"]))
+//15
+function collatz(n) {
+    let arr = []
+    arr.push(n)
+    while(n > 1){
+        if(n % 2 === 0){
+            n/=2
+            arr.push(n)
+        }
+        else{
+            n = n*3+1
+            arr.push(n)
+        }
+    }
+    return arr
+}
+console.log(collatz(20))
