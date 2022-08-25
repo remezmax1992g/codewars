@@ -135,3 +135,27 @@ function collatz(n) {
     return arr
 }
 console.log(collatz(20))
+//16
+export function digitize(n) {
+    return n.toString().split("").reverse().map(int => parseInt(int, 10))
+}
+console.log(digitize(20434545))
+//17
+String.prototype.isUpperCase = function() {
+    return this.valueOf().toUpperCase() === this.valueOf()
+}
+console.log("DFFFFDF".isUpperCase())
+//18
+function divisibleBy(numbers, divisor){
+    return numbers.filter(num => num % divisor === 0)
+}
+console.log(divisibleBy([1, 2, 3, 4, 5, 6], 2))
+//19
+function billboard(name, price = 30){
+    let sum = 0
+    for (let i = 0; i < name.split("").length; i++) {
+        sum+=price
+    }
+    return sum
+}
+console.log(billboard("Jeong-Ho Aristotelis"))
