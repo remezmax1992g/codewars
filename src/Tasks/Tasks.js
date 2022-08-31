@@ -274,5 +274,27 @@ function SubtractSum(n){
         return SubtractSum(temp)
     }
 }
-
 console.log(SubtractSum(10))
+//22
+function oddCount(n) {
+    return Math.floor(n/2)
+}
+console.log(oddCount(15))
+//23
+function quadratic(x1, x2){
+ return [1, -x1-x2, x1*x2]
+}
+console.log(quadratic(0, 1))
+//24
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+console.log(goals(1, 2, 5))
+//25
+const flip=(d, a)=>{
+    if (d === 'R')
+        return a.sort((a,b) => a >= b ? 1 : -1)
+    if (d === 'L')
+        return a.sort((a,b) => a >= b ? -1 : 1)
+}
+console.log(flip('R', [3, 2, 1, 2]))
