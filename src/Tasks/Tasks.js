@@ -322,3 +322,21 @@ function noSpace(x){
     return x.split(" ").join("")
 }
 console.log(noSpace("cfvfvfvfvfvfvf  vfv fvcfvfv fvff9v vf"))
+//30
+function feast(beast, dish) {
+    if(beast && dish){
+        const b1 = beast[0];
+        const b2 = beast[beast.length - 1];
+        const d1 = dish[0];
+        const d2 = dish[dish.length - 1];
+        if(b1 === d1 && b2 === d2) return true
+        else return false
+    }
+    else return false;
+}
+console.log(feast("chickadee", "chocolate cake"))
+//31
+var summation = function (num) {
+return (num * (num + 1))/2
+ }
+console.log(summation(10))
