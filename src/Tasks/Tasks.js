@@ -298,3 +298,27 @@ const flip=(d, a)=>{
         return a.sort((a,b) => a >= b ? -1 : 1)
 }
 console.log(flip('R', [3, 2, 1, 2]))
+//26
+const arr = N => {
+    let arr = []
+    for (let i = 0; i < N; i++) {
+        arr.push(i)
+    }
+    return arr
+}
+console.log(arr(4))
+//27
+function makeFlat(arr){
+    return arr.reduce((acc, el) => acc.concat(Array.isArray(el) ? makeFlat(el):el),[])
+}
+console.log(makeFlat([[1,2],[3,[4,[5]]]]))
+//28
+function rowSumOddNumbers(n) {
+    return Math.pow(n, 3)
+}
+//29
+console.log(rowSumOddNumbers(3))
+function noSpace(x){
+    return x.split(" ").join("")
+}
+console.log(noSpace("cfvfvfvfvfvfvf  vfv fvcfvfv fvff9v vf"))
