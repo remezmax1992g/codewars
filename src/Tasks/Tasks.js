@@ -324,15 +324,7 @@ function noSpace(x){
 console.log(noSpace("cfvfvfvfvfvfvf  vfv fvcfvfv fvff9v vf"))
 //30
 function feast(beast, dish) {
-    if(beast && dish){
-        const b1 = beast[0];
-        const b2 = beast[beast.length - 1];
-        const d1 = dish[0];
-        const d2 = dish[dish.length - 1];
-        if(b1 === d1 && b2 === d2) return true
-        else return false
-    }
-    else return false;
+    return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
 }
 console.log(feast("chickadee", "chocolate cake"))
 //31
@@ -340,3 +332,13 @@ var summation = function (num) {
 return (num * (num + 1))/2
  }
 console.log(summation(10))
+//32
+function countPositivesSumNegatives(input) {
+        return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : []
+}
+console.log(countPositivesSumNegatives([0, 0, 0]))
+//33
+function findAverage(array) {
+    return array && array.length ? array.reduce((acc, el) => acc + el)/array.length: 0;
+}
+console.log(findAverage([1,2,3,4]))
