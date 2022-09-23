@@ -342,3 +342,27 @@ function findAverage(array) {
     return array && array.length ? array.reduce((acc, el) => acc + el)/array.length: 0;
 }
 console.log(findAverage([1,2,3,4]))
+//35
+function firstNonConsecutive (arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        if(arr[i+1] - arr[i] > 1)
+            return arr[i + 1]
+    }
+    return null
+}
+console.log(firstNonConsecutive([1,2,3,4,6,7,8]))
+//36
+function greet(name){
+    return `Hello, ${name} how are you doing today?`
+}
+console.log(greet("Max"))
+//37
+function abbrevName(name){
+return name.split(" ")[0][0].toUpperCase() + "." + name.split(" ")[1][0].toUpperCase()
+}
+console.log(abbrevName("Sam Harris"))
+//38
+function solution(str){
+return str.split("").reverse().join("")
+}
+console.log(solution("world"))
