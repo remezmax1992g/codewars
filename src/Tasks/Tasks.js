@@ -457,3 +457,16 @@ function fillArray(length, value) {
     return length === 0 ? [] : [value, ...fillArray(length-1, value)]
 }
 console.log((fillArray(7, "q")))
+//44
+Array.prototype.reverse = function(){
+    for (let i = 0; i < this.length - i - 1; i++) {
+        [this[i], this[this.length - 1 - i]] = [this[this.length - 1 - i], this[i]]
+    }
+    return this
+}
+console.log([1,2,3,4,5,6,7].reverse())
+//45
+function likeOrDislike(buttons) {
+    return buttons.reduce( (acc,el) => el===acc ? "Nothing" : el , "Nothing");
+}
+console.log(likeOrDislike(["Like","Like","Dislike","Like","Like","Like","Like","Dislike"]))
