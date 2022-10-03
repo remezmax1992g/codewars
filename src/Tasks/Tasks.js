@@ -470,3 +470,13 @@ function likeOrDislike(buttons) {
     return buttons.reduce( (acc,el) => el===acc ? "Nothing" : el , "Nothing");
 }
 console.log(likeOrDislike(["Like","Like","Dislike","Like","Like","Like","Like","Dislike"]))
+//46
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((acc, el) => acc + el);
+}
+console.log(arrayPlusArray([0, 0, 0], [4, 5, 6]))
+//47
+function rentalCarCost(d) {
+    return d < 3 ? 40 * d : d < 7 ? d*40 -20  : d*40 -50
+}
+console.log(rentalCarCost(6))
