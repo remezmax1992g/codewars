@@ -480,3 +480,30 @@ function rentalCarCost(d) {
     return d < 3 ? 40 * d : d < 7 ? d*40 -20  : d*40 -50
 }
 console.log(rentalCarCost(6))
+//48
+function partlist(arr) {
+    let newArr = []
+    let temp = ""
+    while(arr.length > 1){
+        temp = temp + arr[0] + " "
+        console.log(temp)
+        arr.shift()
+        newArr.push([temp.trim(), arr.join(" ")])
+    }
+    return newArr
+}
+console.log(partlist(["I", "wish", "I", "hadn't", "come"]))
+//49
+function points(games) {
+    let sum = 0
+    for (let i = 0; i < games.length; i++) {
+        if(Number(games[i][0]) > Number(games[i][2])){
+            sum = sum + 3
+        }
+        if(Number(games[i][0]) === Number(games[i][2])){
+            sum = sum + 1
+        }
+    }
+    return sum
+}
+console.log(points(['1:0','2:0','3:0','4:0','2:1','3:1','4:1','3:2','4:2','4:3']))
